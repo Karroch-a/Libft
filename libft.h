@@ -6,7 +6,7 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/31 21:51:41 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/09 22:54:33 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/10 15:59:45 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_isalpha(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
-char	*ft_strcat(char *dest, char *src);
+char	*ft_strcat(char *dest, const char *src);
 void	*ft_memset(void	*a, int c, size_t e);
 char	*ft_strstr(const char *s1, const char *s2);
 int		ft_atoi(const char *str);
@@ -68,4 +68,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s);
 #endif

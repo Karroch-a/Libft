@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/02 21:27:55 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/10 15:49:23 by aazeroua         ###   ########.fr       */
+/*   Created: 2019/04/10 15:50:42 by aazeroua          #+#    #+#             */
+/*   Updated: 2019/04/10 16:12:58 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *s1, const char *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	n;
+	int		len;
 	char	*a;
 
-	a = (char *)s1;
-	n = ft_strlen(s2);
-	while (*a)
-		if (!ft_memcmp(a++, s2, n))
-			return (a - 1);
-	return (0);
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	a = ft_strnew(len);
+	if (a)
+	{
+		ft_strcpy(a, s1);
+		ft_strcat(a, s2);
+		return (a);
+	}
+	return (NULL);
 }
