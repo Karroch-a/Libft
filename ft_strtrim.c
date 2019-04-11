@@ -6,7 +6,7 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/11 15:17:09 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/11 15:53:33 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/11 17:14:18 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s)
 	while (i <= len && (s[len] == '\t' || s[len] == '\n' || s[len] == 32))
 		len--;
 	if (!(fin = ft_strnew(len + 1 - i)))
-			return (NULL);
+		return (NULL);
 	ft_strncpy(fin, (s + i), (len - i + 1));
 	fin[len - i + 1] = '\0';
 	return (fin);

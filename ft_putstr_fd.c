@@ -6,7 +6,7 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 15:00:12 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/07 15:48:16 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/11 18:58:37 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char const *s, int fd)
 	int i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
