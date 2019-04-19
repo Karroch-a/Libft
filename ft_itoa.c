@@ -6,13 +6,13 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 16:48:14 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/16 20:48:11 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/19 19:13:13 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		count_number(int c)
+static int	count_number(int c)
 {
 	int i;
 
@@ -29,7 +29,7 @@ int		count_number(int c)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	long int	mod;
 	long int	dev;

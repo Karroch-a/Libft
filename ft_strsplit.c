@@ -6,13 +6,13 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 23:33:30 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/17 18:43:15 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/19 22:29:09 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		word_count(char const *s, char c)
+static int		word_count(char const *s, char c)
 {
 	int i;
 	int	j;
@@ -23,9 +23,9 @@ int		word_count(char const *s, char c)
 	{
 		if (s[i] == c)
 			i++;
-		else if (s[i] != c)
+		else
 		{
-			while (s[i] != c)
+			while (s[i] && s[i] != c)
 				i++;
 			j++;
 		}
@@ -33,7 +33,20 @@ int		word_count(char const *s, char c)
 	return (j);
 }
 
-char	**ft_strsplit(char const *s, char c)
+static int		count_char(const char *s, char c, int *i)
+{
+	int j;
+
+	j = 0;
+	while (s[j] != c && s[j])
+	{
+		j++;
+		(*i)++;
+	}
+	return (j);
+}
+
+char			**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -41,12 +54,8 @@ char	**ft_strsplit(char const *s, char c)
 	char	**tab;
 
 	i = 0;
-	j = 0;
 	k = 0;
-	if (!s)
-		return (NULL);
-	tab = (char **)malloc(sizeof(char *) * (word_count(s, c)));
-	if (!tab)
+	if (!s || !(tab = (char **)malloc(sizeof(char *) * (word_count(s, c)))))
 		return (NULL);
 	while (s[i] != '\0')
 	{
@@ -55,17 +64,11 @@ char	**ft_strsplit(char const *s, char c)
 		else if (s[i] != c)
 		{
 			s = s + i;
-			while (s[j] != c && s[j])
-			{
-				j++;
-				i++;
-			}
+			j = count_char(s, c, &i);
 			if (!(tab[k] = (char *)malloc(j + 1)))
 				return (NULL);
-			tab[k] = ft_strsub(s, 0, j);
-			k++;
+			tab[k++] = ft_strsub(s, 0, j);
 			i = j;
-			j = 0;
 		}
 	}
 	tab[k] = 0;

@@ -6,7 +6,7 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 20:36:28 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/11 00:53:30 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/18 19:31:54 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,5 @@ int		ft_atoi(const char *str)
 		res = res * 10 + a[i] - '0';
 		i++;
 	}
-	if (res > 2147483647 && sign == 1)
-		return (-1);
-	if (res > 2147483648 && sign == -1)
-		return (0);
 	return (res * sign);
 }

@@ -6,13 +6,13 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 00:07:41 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/08 00:14:26 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/19 16:05:56 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_strnew(size_t size)
+char	*ft_strnew(size_t size)
 {
 	return ((char *)ft_memalloc(size + 1));
 }
