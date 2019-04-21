@@ -6,9 +6,11 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/01 15:29:20 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/01 15:36:40 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/21 02:06:11 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char		*ft_strcpy(char *dst, const char *src)
 {

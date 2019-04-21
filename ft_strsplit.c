@@ -6,7 +6,7 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 23:33:30 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/19 22:29:09 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/20 23:55:08 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ static int		word_count(char const *s, char c)
 			j++;
 		}
 	}
-	return (j);
+	return (j + 1);
 }
 
-static int		count_char(const char *s, char c, int *i)
+static int		count_char(char const *s, char c, int *i)
 {
 	int j;
 

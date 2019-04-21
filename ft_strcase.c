@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strcase.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/27 18:05:03 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/20 15:52:03 by aazeroua         ###   ########.fr       */
+/*   Created: 2019/04/21 01:45:56 by aazeroua          #+#    #+#             */
+/*   Updated: 2019/04/21 02:00:58 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, const char *src)
+#include "libft.h"
+
+char	*ft_strcase(char *s)
 {
 	int i;
-	int j;
 
 	i = 0;
-	j = 0;
-	while (dest[i] != '\0')
-		i++;
-	while (src[j] != '\0')
+	while (s[i] != '\0')
 	{
-		dest[i] = src[j];
+		if (s[i] >= 'a' && s[i] <= 'z')
+		{
+			s[i] -= 32;
+		}
+		else
+			s[i] += 32;
 		i++;
-		j++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (s);
 }
