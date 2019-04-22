@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_getindex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/31 16:57:56 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/21 04:19:27 by aazeroua         ###   ########.fr       */
+/*   Created: 2019/04/21 02:44:39 by aazeroua          #+#    #+#             */
+/*   Updated: 2019/04/21 02:48:19 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+int		ft_getindex(char *str, char c)
 {
-	return (c >= 32 && c <= 126);
+	int i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] != c)
+			i++;
+		else
+			return (i);
+	}
+	return (0);
 }

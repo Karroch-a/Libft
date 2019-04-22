@@ -6,7 +6,7 @@
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/31 21:51:41 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/21 02:04:14 by aazeroua         ###   ########.fr       */
+/*   Updated: 2019/04/21 02:51:22 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 void	ft_swap(int *a, int *b);
 char	*ft_strcase(char *s);
 int		ft_abs(int n);
+char	*ft_strrev(char *str);
+int		ft_getindex(char *str, char c);
 #endif

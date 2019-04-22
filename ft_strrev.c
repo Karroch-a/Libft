@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aazeroua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/31 16:57:56 by aazeroua          #+#    #+#             */
-/*   Updated: 2019/04/21 04:19:27 by aazeroua         ###   ########.fr       */
+/*   Created: 2019/04/21 02:35:16 by aazeroua          #+#    #+#             */
+/*   Updated: 2019/04/21 02:39:29 by aazeroua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isprint(int c)
+char	*ft_strrev(char *str)
 {
-	return (c >= 32 && c <= 126);
+	int		a;
+	int		b;
+	char	c;
+
+	a = 0;
+	b = 0;
+	while (str[b] != '\0')
+		b++;
+	b = b - 1;
+	while (a < b)
+	{
+		c = str[a];
+		str[a] = str[b];
+		str[b] = c;
+		b--;
+		a++;
+	}
+	return (str);
 }
