@@ -69,11 +69,12 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	*ft_itoa(int n);
-char	**ft_strsplit(char const *s, char c);
+char	**ft_strsplit(char *s, char c);
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 void	ft_swap(int *a, int *b);
 char	*ft_strcase(char *s);
 int		ft_abs(int n);
 char	*ft_strrev(char *str);
 int		ft_getindex(char *str, char c);
+int		word_count(char *s, char c);
 #endif
